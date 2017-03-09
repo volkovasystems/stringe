@@ -1,6 +1,6 @@
 {
   "name": "stringe",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Safe toString alternative.",
   "main": "stringe.deploy.js",
   "support": "stringe.support.js",

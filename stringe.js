@@ -60,15 +60,15 @@ const stringe = function stringe( entity ){
 		@end-meta-configuration
 	*/
 
-	if( !entity ){
+	if( typeof entity == "undefined" || entity === null ||
+		typeof entity[ TO_STRING ] != "function" )
+	{
 		return `${ entity }`;
 	}
 
 	let issue = [ ];
 	try{
-		if( ( ( TO_STRING in entity ) || entity[ TO_STRING ] ) &&
-			( typeof entity[ TO_STRING ] == "function" ) )
-		{
+		if( entity[ TO_STRING ] && ( typeof entity[ TO_STRING ] == "function" ) ){
 			return entity.toString( );
 		}
 
