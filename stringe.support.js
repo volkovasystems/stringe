@@ -44,9 +44,6 @@
               	@module-documentation:
               		Safe toString alternative.
               	@end-module-documentation
-              
-              	@include:
-              	@end-include
               */var _stringify = require("babel-runtime/core-js/json/stringify");var _stringify2 = _interopRequireDefault(_stringify);var _getOwnPropertyNames = require("babel-runtime/core-js/object/get-own-property-names");var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var TO_STRING = "toString";
@@ -60,13 +57,16 @@ var stringe = function stringe(entity) {
                                         	@end-meta-configuration
                                         */
 
-	if (typeof entity == "undefined" || entity === null ||
-	typeof entity[TO_STRING] != "function")
-	{
-		return "" + entity;
-	}
-
 	var issue = [];
+	try {
+		if (typeof entity == "undefined" || entity === null ||
+		typeof entity[TO_STRING] != "function")
+		{
+			return "" + entity;
+		}
+
+	} catch (error) {issue.push(error.stack);}
+
 	try {
 		if (entity[TO_STRING] && typeof entity[TO_STRING] == "function") {
 			return entity.toString();

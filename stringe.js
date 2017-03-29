@@ -44,9 +44,6 @@
 	@module-documentation:
 		Safe toString alternative.
 	@end-module-documentation
-
-	@include:
-	@end-include
 */
 
 const TO_STRING = "toString";
@@ -60,13 +57,16 @@ const stringe = function stringe( entity ){
 		@end-meta-configuration
 	*/
 
-	if( typeof entity == "undefined" || entity === null ||
-		typeof entity[ TO_STRING ] != "function" )
-	{
-		return `${ entity }`;
-	}
-
 	let issue = [ ];
+	try{
+		if( typeof entity == "undefined" || entity === null ||
+			typeof entity[ TO_STRING ] != "function" )
+		{
+			return `${ entity }`;
+		}
+
+	}catch( error ){ issue.push( error.stack ); }
+
 	try{
 		if( entity[ TO_STRING ] && ( typeof entity[ TO_STRING ] == "function" ) ){
 			return entity.toString( );
