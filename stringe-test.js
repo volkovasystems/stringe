@@ -1,14 +1,29 @@
 
+const assert = require( "assert" );
 const stringe = require( "./stringe.js" );
 
-console.log( stringe( global ) );
+assert.ok( stringe( global ) );
 
-console.log( stringe( true ) );
+assert.ok( stringe( true ) );
 
-console.log( stringe( undefined ) );
+assert.ok( stringe( undefined ) );
 
-console.log( stringe( null ) );
+assert.ok( stringe( null ) );
 
-console.log( stringe( 123 ) );
+assert.ok( stringe( NaN ) );
 
-console.log( stringe( "hello world" ) );
+assert.ok( stringe( Infinity ) );
+
+assert.ok( stringe( Array ) );
+
+assert.ok( stringe( 123 ) );
+
+assert.ok( stringe( "hello world" ) );
+
+assert.ok( stringe( function test( ){ return "test"; } ) );
+
+assert.ok( stringe( ( ) => { } ) );
+
+assert.ok( stringe( { "hello": "world" } ) );
+
+console.log( "ok" );

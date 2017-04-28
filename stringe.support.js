@@ -44,7 +44,7 @@
               	@module-documentation:
               		Safe toString alternative.
               	@end-module-documentation
-              */var _stringify = require("babel-runtime/core-js/json/stringify");var _stringify2 = _interopRequireDefault(_stringify);var _getOwnPropertyNames = require("babel-runtime/core-js/object/get-own-property-names");var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+              */var _getOwnPropertyNames = require("babel-runtime/core-js/object/get-own-property-names");var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);var _stringify = require("babel-runtime/core-js/json/stringify");var _stringify2 = _interopRequireDefault(_stringify);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var TO_STRING = "toString";
 
@@ -56,6 +56,10 @@ var stringe = function stringe(entity) {
                                         		}
                                         	@end-meta-configuration
                                         */
+
+	if (typeof entity == "string") {
+		return entity;
+	}
 
 	var issue = [];
 	try {
@@ -75,13 +79,12 @@ var stringe = function stringe(entity) {
 	} catch (error) {issue.push(error.stack);}
 
 	try {
-		var copy = {};
-		(0, _getOwnPropertyNames2.default)(entity).
-		forEach(function (property) {
-			copy[property] = stringe(entity[property]);
-		});
+		return (0, _stringify2.default)((0, _getOwnPropertyNames2.default)(entity).
+		reduce(function (cache, property) {
+			cache[property] = stringe(entity[property]);
 
-		return (0, _stringify2.default)(copy);
+			return cache;
+		}, {}));
 
 	} catch (error) {issue.push(error.stack);}
 
@@ -91,7 +94,7 @@ var stringe = function stringe(entity) {
 	} catch (error) {
 		issue.push(error.stack);
 
-		throw new Error("fatal cannot transform to string, " + issue.join(","));
+		throw new Error("fatal, cannot transform to string, " + issue.join(","));
 	}
 };
 

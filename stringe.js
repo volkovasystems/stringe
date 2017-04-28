@@ -57,6 +57,10 @@ const stringe = function stringe( entity ){
 		@end-meta-configuration
 	*/
 
+	if( typeof entity == "string" ){
+		return entity;
+	}
+
 	let issue = [ ];
 	try{
 		if( typeof entity == "undefined" || entity === null ||
@@ -75,13 +79,12 @@ const stringe = function stringe( entity ){
 	}catch( error ){ issue.push( error.stack ); }
 
 	try{
-		let copy = { };
-		Object.getOwnPropertyNames( entity )
-			.forEach( ( property ) => {
-				copy[ property ] = stringe( entity[ property ] );
-			} )
+		return JSON.stringify( Object.getOwnPropertyNames( entity )
+			.reduce( ( cache, property ) => {
+				cache[ property ] = stringe( entity[ property ] );
 
-		return JSON.stringify( copy );
+				return cache;
+			}, { } ) );
 
 	}catch( error ){ issue.push( error.stack ); }
 
@@ -91,7 +94,7 @@ const stringe = function stringe( entity ){
 	}catch( error ){
 		issue.push( error.stack );
 
-		throw new Error( `fatal cannot transform to string, ${ issue.join( "," ) }` )
+		throw new Error( `fatal, cannot transform to string, ${ issue.join( "," ) }` )
 	}
 };
 
