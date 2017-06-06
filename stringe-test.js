@@ -2,28 +2,28 @@
 const assert = require( "assert" );
 const stringe = require( "./stringe.js" );
 
-assert.ok( stringe( global ) );
+assert.equal( stringe( global ), "[object global]", "should be equal" );
 
-assert.ok( stringe( true ) );
+assert.equal( stringe( true ), "true", "should be 'true'" );
 
-assert.ok( stringe( undefined ) );
+assert.equal( stringe( undefined ), "undefined", "should be 'undefined'" );
 
-assert.ok( stringe( null ) );
+assert.equal( stringe( null ), "null", "should be 'null'" );
 
-assert.ok( stringe( NaN ) );
+assert.equal( stringe( NaN ), "NaN", "should have value 'NaN'" );
 
-assert.ok( stringe( Infinity ) );
+assert.equal( stringe( Infinity ), "Infinity", "should have value 'Infinity'" );
 
-assert.ok( stringe( Array ) );
+assert.equal( stringe( Array ), "function Array() { [native code] }", "should be equal" );
 
-assert.ok( stringe( 123 ) );
+assert.equal( stringe( 123 ), "123", "should have value '123'" );
 
-assert.ok( stringe( "hello world" ) );
+assert.equal( stringe( "hello world" ), "hello world", "should have value 'hello world'" );
 
-assert.ok( stringe( function test( ){ return "test"; } ) );
+assert.equal( stringe( function test( ){ return 'test'; } ), "function test( ){ return 'test'; }", "should be equal" );
 
-assert.ok( stringe( ( ) => { } ) );
+assert.equal( stringe( ( ) => { } ), "( ) => { }", "should be equal" );
 
-assert.ok( stringe( { "hello": "world" } ) );
+assert.equal( stringe( { "hello": "world" } ), "[object Object]", "should be equal" );
 
 console.log( "ok" );
