@@ -1,11 +1,12 @@
 {
   "name": "stringe",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Safe toString alternative.",
   "main": "stringe.deploy.js",
   "support": "stringe.support.js",
   "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
