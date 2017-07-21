@@ -14,7 +14,7 @@
 		"build:deploy": "webpack --config webpack.compact.js --progress --display-modules",
 		"rebuild": "npm run build:support && npm run build:deploy",
 		"build": "npm run pristine && npm run rebuild",
-		"test:server": "mocha test.js"
+		"test:server": "mocha test.js && mocha test.js --reporter=json > test.server.json"
 	},
 	"repository": {
 		"type": "git",
