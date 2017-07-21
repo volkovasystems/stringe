@@ -118,6 +118,17 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
+	describe( "`stringe( NaN )`", ( ) => {
+
+		it( "should return 'NaN'", ( ) => {
+
+			assert.equal( stringe( NaN ), "NaN" );
+
+		} );
+
+	} );
+
 } );
 
 
@@ -185,6 +196,18 @@ describe( "stringe", ( ) => {
 
 	} );
 
+	describe( "`stringe( NaN )`", ( ) => {
+
+		it( "should return 'NaN'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( NaN ) );
+
+			assert.equal( result.value, "NaN" );
+
+		} );
+
+	} );
+
 } );
 
 //: @end-bridge
@@ -195,7 +218,7 @@ describe( "stringe", ( ) => {
 
 /*
 
-assert.equal( stringe( NaN ), "NaN", "should return 'NaN'" );
+
 
 assert.equal( stringe( Infinity ), "Infinity", "should return 'Infinity'" );
 
