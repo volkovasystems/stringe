@@ -152,6 +152,16 @@ describe( "stringe", ( ) => {
 	} );
 
 
+	describe( "`stringe( 123 )`", ( ) => {
+
+		it( "should return '123'", ( ) => {
+
+			assert.equal( stringe( 123 ), "123" );
+
+		} );
+
+	} );
+
 } );
 
 
@@ -258,6 +268,18 @@ describe( "stringe", ( ) => {
 	} );
 
 
+	describe( "`stringe( 123 )`", ( ) => {
+
+		it( "should return '123'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( 123 ) );
+
+			assert.equal( result.value, "123" );
+
+		} );
+
+	} );
+
 } );
 
 //: @end-bridge
@@ -269,8 +291,6 @@ describe( "stringe", ( ) => {
 /*
 
 
-
-assert.equal( stringe( 123 ), "123", "should return '123'" );
 
 assert.equal( stringe( "hello world" ), "hello world", "should return 'hello world'" );
 
