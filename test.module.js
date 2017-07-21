@@ -88,6 +88,37 @@ describe( "stringe", ( ) => {
 
 //: @end-bridge
 
+
+//: @bridge:
+//let result = browser.url( bridgeURL ).execute( ( ) => <test> );
+//result.value
+describe( "stringe", ( ) => {
+
+
+	let directory = __dirname;
+	let testBridge = path.resolve( directory, "bridge.html" );
+	let bridgeURL = `file://${ testBridge }`;
+
+	describe( "`stringe( global )`", ( ) => {
+
+		it( "should return '[object global]'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( global ) );
+
+			assert.equal( result.value, "[object global]" );
+
+		} );
+
+	} );
+
+} );
+
+//: @end-bridge
+
+
+
+
+
 /*
 
 assert.equal( stringe( global ), "[object global]", "should return '[object global]'" );
