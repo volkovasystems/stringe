@@ -99,13 +99,13 @@ describe( "stringe", ( ) => {
 	let testBridge = path.resolve( directory, "bridge.html" );
 	let bridgeURL = `file://${ testBridge }`;
 
-	describe( "`stringe( global )`", ( ) => {
+	describe( "`stringe( window )`", ( ) => {
 
-		it( "should return '[object global]'", ( ) => {
+		it( "should return '[object Window]'", ( ) => {
 
-			let result = browser.url( bridgeURL ).execute( ( ) => stringe( global ) );
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( window ) );
 
-			assert.equal( result.value, "[object global]" );
+			assert.equal( result.value, "[object Window]" );
 
 		} );
 
