@@ -173,6 +173,39 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
+	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
+
+		it( "should return 'function test( ){ return 'test' }'", ( ) => {
+
+			assert.equal( stringe( function test( ){ return 'test' } ), "function test( ){ return 'test' }" );
+
+		} );
+
+	} );
+
+
+	describe( "`stringe( ( ) => { } )`", ( ) => {
+
+		it( "should return '( ) => { }'", ( ) => {
+
+			assert.equal( stringe( ( ) => { } ), "( ) => { }" );
+
+		} );
+
+	} );
+
+
+	describe( "`stringe( { 'hello': 'world' } )`", ( ) => {
+
+		it( "should return '[object Object]'", ( ) => {
+
+			assert.equal( stringe( { "hello": "world" } ), "[object Object]" );
+
+		} );
+
+	} );
+
 } );
 
 
@@ -304,24 +337,50 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
+	describe( "`stringe( { 'hello': 'world' } )`", ( ) => {
+
+		it( "should return '[object Object]'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( { "hello": "world" } ) );
+
+			assert.equal( result.value, "[object Object]" );
+
+		} );
+
+	} );
+
 } );
 
 //: @end-bridge
 
 
+/*;
+	@note:
+		Do not change or delete this, the following are failing bridge tests
 
+		describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
 
+			it( "should return 'function test( ){ return 'test' }'", ( ) => {
 
-/*
+				let result = browser.url( bridgeURL ).execute( ( ) => stringe( function test( ){ return 'test' } ) );
 
+				assert.equal( result.value, "function test( ){ return 'test' }" );
 
+			} );
 
+		} );
 
+		describe( "`stringe( ( ) => { } )`", ( ) => {
 
-assert.equal( stringe( function test( ){ return 'test'; } ), "function test( ){ return 'test'; }", "should return 'function test( ){ return 'test' }'" );
+			it( "should return '( ) => { }'", ( ) => {
 
-assert.equal( stringe( ( ) => { } ), "( ) => { }", "should return '( ) => { }'" );
+				console.log( stringe( ( ) => { } ) );
+				assert.equal( true, true );
 
-assert.equal( stringe( { "hello": "world" } ), "[object Object]", "should return '[object Object]'" );
+			} );
 
+		} );
+
+	@end-note
 */
