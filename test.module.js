@@ -78,10 +78,24 @@ describe( "stringe", ( ) => {
 	describe( "`stringe( global )`", ( ) => {
 
 		it( "should return '[object global]'", ( ) => {
+
 			assert.equal( stringe( global ), "[object global]" );
+
 		} );
 
 	} );
+
+
+	describe( "`stringe( true )`", ( ) => {
+
+		it( "should return 'true'", ( ) => {
+
+			assert.equal( stringe( true ), "true" );
+
+		} );
+
+	} );
+
 
 } );
 
@@ -99,6 +113,7 @@ describe( "stringe", ( ) => {
 	let testBridge = path.resolve( directory, "bridge.html" );
 	let bridgeURL = `file://${ testBridge }`;
 
+
 	describe( "`stringe( window )`", ( ) => {
 
 		it( "should return '[object Window]'", ( ) => {
@@ -106,6 +121,19 @@ describe( "stringe", ( ) => {
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( window ) );
 
 			assert.equal( result.value, "[object Window]" );
+
+		} );
+
+	} );
+
+
+	describe( "`stringe( true )`", ( ) => {
+
+		it( "should return 'true'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( true ) );
+
+			assert.equal( result.value, "true" );
 
 		} );
 
@@ -121,9 +149,6 @@ describe( "stringe", ( ) => {
 
 /*
 
-assert.equal( stringe( global ), "[object global]", "should return '[object global]'" );
-
-assert.equal( stringe( true ), "true", "should return 'true'" );
 
 assert.equal( stringe( undefined ), "undefined", "should return 'undefined'" );
 
