@@ -108,6 +108,16 @@ describe( "stringe", ( ) => {
 	} );
 
 
+	describe( "`stringe( null )`", ( ) => {
+
+		it( "should return 'null'", ( ) => {
+
+			assert.equal( stringe( null ), "null" );
+
+		} );
+
+	} );
+
 } );
 
 
@@ -115,8 +125,8 @@ describe( "stringe", ( ) => {
 
 
 //: @bridge:
-//let result = browser.url( bridgeURL ).execute( ( ) => <test> );
-//result.value
+
+
 describe( "stringe", ( ) => {
 
 
@@ -162,6 +172,19 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
+	describe( "`stringe( null )`", ( ) => {
+
+		it( "should return 'null'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( null ) );
+
+			assert.equal( result.value, "null" );
+
+		} );
+
+	} );
+
 } );
 
 //: @end-bridge
@@ -171,11 +194,6 @@ describe( "stringe", ( ) => {
 
 
 /*
-
-
-
-
-assert.equal( stringe( null ), "null", "should return 'null'" );
 
 assert.equal( stringe( NaN ), "NaN", "should return 'NaN'" );
 
