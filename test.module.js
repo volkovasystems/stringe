@@ -129,6 +129,17 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
+	describe( "`stringe( Infinity )`", ( ) => {
+
+		it( "should return 'Infinity'", ( ) => {
+
+			assert.equal( stringe( Infinity ), "Infinity" );
+
+		} );
+
+	} );
+
 } );
 
 
@@ -208,6 +219,19 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
+	describe( "`stringe( Infinity )`", ( ) => {
+
+		it( "should return 'Infinity'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( Infinity ) );
+
+			assert.equal( result.value, "Infinity" );
+
+		} );
+
+	} );
+
 } );
 
 //: @end-bridge
@@ -220,7 +244,7 @@ describe( "stringe", ( ) => {
 
 
 
-assert.equal( stringe( Infinity ), "Infinity", "should return 'Infinity'" );
+
 
 assert.equal( stringe( Array ), "function Array() { [native code] }", "should return 'function Array() { [native code] }'" );
 
