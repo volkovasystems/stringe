@@ -140,6 +140,18 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
+	describe( "`stringe( Array )`", ( ) => {
+
+		it( "should return 'function Array() { [native code] }'", ( ) => {
+
+			assert.equal( stringe( Array ), "function Array() { [native code] }" );
+
+		} );
+
+	} );
+
+
 } );
 
 
@@ -232,6 +244,20 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
+	describe( "`stringe( Array )`", ( ) => {
+
+		it( "should return 'function Array() { [native code] }'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( Array ) );
+
+			assert.equal( result.value, "function Array() { [native code] }" );
+
+		} );
+
+	} );
+
+
 } );
 
 //: @end-bridge
@@ -243,10 +269,6 @@ describe( "stringe", ( ) => {
 /*
 
 
-
-
-
-assert.equal( stringe( Array ), "function Array() { [native code] }", "should return 'function Array() { [native code] }'" );
 
 assert.equal( stringe( 123 ), "123", "should return '123'" );
 
