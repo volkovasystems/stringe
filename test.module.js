@@ -97,6 +97,17 @@ describe( "stringe", ( ) => {
 	} );
 
 
+	describe( "`stringe( undefined )`", ( ) => {
+
+		it( "should return 'undefined'", ( ) => {
+
+			assert.equal( stringe( undefined ), "undefined" );
+
+		} );
+
+	} );
+
+
 } );
 
 
@@ -139,6 +150,18 @@ describe( "stringe", ( ) => {
 
 	} );
 
+	describe( "`stringe( undefined )`", ( ) => {
+
+		it( "should return 'undefined'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( undefined ) );
+
+			assert.equal( result.value, "undefined" );
+
+		} );
+
+	} );
+
 } );
 
 //: @end-bridge
@@ -150,7 +173,7 @@ describe( "stringe", ( ) => {
 /*
 
 
-assert.equal( stringe( undefined ), "undefined", "should return 'undefined'" );
+
 
 assert.equal( stringe( null ), "null", "should return 'null'" );
 
