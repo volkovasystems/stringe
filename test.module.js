@@ -162,6 +162,17 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
+	describe( "`stringe( 'hello world' )`", ( ) => {
+
+		it( "should return 'hello world'", ( ) => {
+
+			assert.equal( stringe( "hello world" ), "hello world" );
+
+		} );
+
+	} );
+
 } );
 
 
@@ -280,6 +291,19 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
+	describe( "`stringe( 'hello world' )`", ( ) => {
+
+		it( "should return 'hello world'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( "hello world" ) );
+
+			assert.equal( result.value, "hello world" );
+
+		} );
+
+	} );
+
 } );
 
 //: @end-bridge
@@ -292,7 +316,7 @@ describe( "stringe", ( ) => {
 
 
 
-assert.equal( stringe( "hello world" ), "hello world", "should return 'hello world'" );
+
 
 assert.equal( stringe( function test( ){ return 'test'; } ), "function test( ){ return 'test'; }", "should return 'function test( ){ return 'test' }'" );
 
