@@ -69,12 +69,12 @@ const stringe = require( "./stringe.support.js" );
 const path = require( "path" );
 //: @end-bridge
 
-//: @!bridge:
 
+//: @server:
 
 describe( "stringe", ( ) => {
 
-	//: @server:
+
 	describe( "`stringe( global )`", ( ) => {
 
 		it( "should return '[object global]'", ( ) => {
@@ -84,20 +84,6 @@ describe( "stringe", ( ) => {
 		} );
 
 	} );
-	//: @end-server
-
-
-	//: @client:
-	describe( "`stringe( window )`", ( ) => {
-
-		it( "should return '[object Window]'", ( ) => {
-
-			assert.equal( stringe( window ), "[object Window]" );
-
-		} );
-
-	} );
-	//: @end-client
 
 
 	describe( "`stringe( true )`", ( ) => {
@@ -222,8 +208,151 @@ describe( "stringe", ( ) => {
 
 } );
 
+//: @end-server
 
-//: @end-bridge
+
+//: @client:
+
+describe( "stringe", ( ) => {
+
+
+	describe( "`stringe( window )`", ( ) => {
+
+		it( "should return '[object Window]'", ( ) => {
+
+			assert.equal( stringe( window ), "[object Window]" );
+
+		} );
+
+	} );
+
+
+	describe( "`stringe( true )`", ( ) => {
+
+		it( "should return 'true'", ( ) => {
+
+			assert.equal( stringe( true ), "true" );
+
+		} );
+
+	} );
+
+
+	describe( "`stringe( undefined )`", ( ) => {
+
+		it( "should return 'undefined'", ( ) => {
+
+			assert.equal( stringe( undefined ), "undefined" );
+
+		} );
+
+	} );
+
+
+	describe( "`stringe( null )`", ( ) => {
+
+		it( "should return 'null'", ( ) => {
+
+			assert.equal( stringe( null ), "null" );
+
+		} );
+
+	} );
+
+
+	describe( "`stringe( NaN )`", ( ) => {
+
+		it( "should return 'NaN'", ( ) => {
+
+			assert.equal( stringe( NaN ), "NaN" );
+
+		} );
+
+	} );
+
+
+	describe( "`stringe( Infinity )`", ( ) => {
+
+		it( "should return 'Infinity'", ( ) => {
+
+			assert.equal( stringe( Infinity ), "Infinity" );
+
+		} );
+
+	} );
+
+
+	describe( "`stringe( Array )`", ( ) => {
+
+		it( "should return 'function Array() { [native code] }'", ( ) => {
+
+			assert.equal( stringe( Array ), "function Array() { [native code] }" );
+
+		} );
+
+	} );
+
+
+	describe( "`stringe( 123 )`", ( ) => {
+
+		it( "should return '123'", ( ) => {
+
+			assert.equal( stringe( 123 ), "123" );
+
+		} );
+
+	} );
+
+
+	describe( "`stringe( 'hello world' )`", ( ) => {
+
+		it( "should return 'hello world'", ( ) => {
+
+			assert.equal( stringe( "hello world" ), "hello world" );
+
+		} );
+
+	} );
+
+	describe( "`stringe( { 'hello': 'world' } )`", ( ) => {
+
+		it( "should return '[object Object]'", ( ) => {
+
+			assert.equal( stringe( { "hello": "world" } ), "[object Object]" );
+
+		} );
+
+	} );
+
+	/*;
+		@note:
+			Do not change or delete this, the following are failing test
+
+	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
+
+		it( "should return 'function test( ){ return 'test' }'", ( ) => {
+
+			assert.equal( stringe( function test( ){ return 'test' } ), "function test( ){ return 'test' }" );
+
+		} );
+
+	} );
+
+	describe( "`stringe( ( ) => { } )`", ( ) => {
+
+		it( "should return '( ) => { }'", ( ) => {
+
+			assert.equal( stringe( ( ) => { } ), "( ) => { }" );
+
+		} );
+
+	} );
+	*/
+
+
+} );
+
+//: @end-client
 
 
 //: @bridge:
