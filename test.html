@@ -1,48 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>stringe unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:stringe</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./stringe.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "stringe unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				assert.equal( stringe( window ), "[object Window]", "should be equal" );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				assert.equal( stringe( true ), "true", "should be 'true'" );
-
-				assert.equal( stringe( undefined ), "undefined", "should be 'undefined'" );
-
-				assert.equal( stringe( null ), "null", "should be 'null'" );
-
-				assert.equal( stringe( NaN ), "NaN", "should have value 'NaN'" );
-
-				assert.equal( stringe( Infinity ), "Infinity", "should have value 'Infinity'" );
-
-				assert.equal( stringe( Array ), "function Array() { [native code] }", "should be equal" );
-
-				assert.equal( stringe( 123 ), "123", "should have value '123'" );
-
-				assert.equal( stringe( "hello world" ), "hello world", "should have value 'hello world'" );
-
-				assert.equal( stringe( function test( ){ return 'test'; } ), "function test( ){ return 'test'; }", "should be equal" );
-
-				assert.equal( stringe( ( ) => { } ), "( ) => { }", "should be equal" );
-
-				assert.equal( stringe( { "hello": "world" } ), "[object Object]", "should be equal" );
-
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
