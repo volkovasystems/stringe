@@ -74,7 +74,7 @@ const path = require( "path" );
 
 describe( "stringe", ( ) => {
 
-
+	//: @server:
 	describe( "`stringe( global )`", ( ) => {
 
 		it( "should return '[object global]'", ( ) => {
@@ -84,6 +84,20 @@ describe( "stringe", ( ) => {
 		} );
 
 	} );
+	//: @end-server
+
+
+	//: @client:
+	describe( "`stringe( window )`", ( ) => {
+
+		it( "should return '[object Window]'", ( ) => {
+
+			assert.equal( stringe( window ), "[object Window]" );
+
+		} );
+
+	} );
+	//: @end-client
 
 
 	describe( "`stringe( true )`", ( ) => {
