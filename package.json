@@ -46,7 +46,7 @@
 	},
 	"homepage": "https://github.com/volkovasystems/stringe#readme",
 	"dependencies": {
-		"babel-runtime": "^6.23.0"
+		"babel-runtime": "^6.25.0"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.24.1",
@@ -62,14 +62,14 @@
 		"gulp-rename": "^1.2.2",
 		"gulp-replace": "^0.6.1",
 		"gulp-sourcemaps": "^2.6.0",
-		"mocha": "^3.4.2",
+		"mocha": "^3.5.0",
 		"should": "^11.2.1",
 		"source-map-loader": "^0.2.1",
 		"wdio-json-reporter": "^0.2.1",
 		"wdio-mocha-framework": "^0.5.10",
 		"wdio-selenium-standalone-service": "^0.0.9",
 		"webdriverio": "^4.8.0",
-		"webpack": "^3.3.0",
+		"webpack": "^3.4.1",
 		"yargs": "^8.0.2"
 	}
 }
