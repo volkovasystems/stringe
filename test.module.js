@@ -74,10 +74,9 @@ const path = require( "path" );
 
 describe( "stringe", ( ) => {
 
-
 	describe( "`stringe( global )`", ( ) => {
 
-		it( "should return '[object global]'", ( ) => {
+		it( "should be equal to '[object global]'", ( ) => {
 
 			assert.equal( stringe( global ), "[object global]" );
 
@@ -88,7 +87,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( true )`", ( ) => {
 
-		it( "should return 'true'", ( ) => {
+		it( "should be equal to 'true'", ( ) => {
 
 			assert.equal( stringe( true ), "true" );
 
@@ -99,7 +98,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( undefined )`", ( ) => {
 
-		it( "should return 'undefined'", ( ) => {
+		it( "should be equal to 'undefined'", ( ) => {
 
 			assert.equal( stringe( undefined ), "undefined" );
 
@@ -110,7 +109,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( null )`", ( ) => {
 
-		it( "should return 'null'", ( ) => {
+		it( "should be equal to 'null'", ( ) => {
 
 			assert.equal( stringe( null ), "null" );
 
@@ -121,7 +120,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( NaN )`", ( ) => {
 
-		it( "should return 'NaN'", ( ) => {
+		it( "should be equal to 'NaN'", ( ) => {
 
 			assert.equal( stringe( NaN ), "NaN" );
 
@@ -132,7 +131,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( Infinity )`", ( ) => {
 
-		it( "should return 'Infinity'", ( ) => {
+		it( "should be equal to 'Infinity'", ( ) => {
 
 			assert.equal( stringe( Infinity ), "Infinity" );
 
@@ -143,7 +142,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( Array )`", ( ) => {
 
-		it( "should return 'function Array() { [native code] }'", ( ) => {
+		it( "should be equal to 'function Array() { [native code] }'", ( ) => {
 
 			assert.equal( stringe( Array ), "function Array() { [native code] }" );
 
@@ -154,7 +153,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( 123 )`", ( ) => {
 
-		it( "should return '123'", ( ) => {
+		it( "should be equal to '123'", ( ) => {
 
 			assert.equal( stringe( 123 ), "123" );
 
@@ -165,7 +164,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( 'hello world' )`", ( ) => {
 
-		it( "should return 'hello world'", ( ) => {
+		it( "should be equal to 'hello world'", ( ) => {
 
 			assert.equal( stringe( "hello world" ), "hello world" );
 
@@ -176,7 +175,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
 
-		it( "should return 'function test( ){ return 'test' }'", ( ) => {
+		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
 
 			assert.equal( stringe( function test( ){ return 'test' } ), "function test( ){ return 'test' }" );
 
@@ -187,7 +186,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( ( ) => { } )`", ( ) => {
 
-		it( "should return '( ) => { }'", ( ) => {
+		it( "should be equal to '( ) => { }'", ( ) => {
 
 			assert.equal( stringe( ( ) => { } ), "( ) => { }" );
 
@@ -198,7 +197,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( { 'hello': 'world' } )`", ( ) => {
 
-		it( "should return '[object Object]'", ( ) => {
+		it( "should be equal to '[object Object]'", ( ) => {
 
 			assert.equal( stringe( { "hello": "world" } ), "[object Object]" );
 
@@ -215,10 +214,9 @@ describe( "stringe", ( ) => {
 
 describe( "stringe", ( ) => {
 
-
 	describe( "`stringe( window )`", ( ) => {
 
-		it( "should return '[object Window]'", ( ) => {
+		it( "should be equal to '[object Window]'", ( ) => {
 
 			assert.equal( stringe( window ), "[object Window]" );
 
@@ -229,7 +227,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( true )`", ( ) => {
 
-		it( "should return 'true'", ( ) => {
+		it( "should be equal to 'true'", ( ) => {
 
 			assert.equal( stringe( true ), "true" );
 
@@ -240,7 +238,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( undefined )`", ( ) => {
 
-		it( "should return 'undefined'", ( ) => {
+		it( "should be equal to 'undefined'", ( ) => {
 
 			assert.equal( stringe( undefined ), "undefined" );
 
@@ -251,7 +249,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( null )`", ( ) => {
 
-		it( "should return 'null'", ( ) => {
+		it( "should be equal to 'null'", ( ) => {
 
 			assert.equal( stringe( null ), "null" );
 
@@ -262,7 +260,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( NaN )`", ( ) => {
 
-		it( "should return 'NaN'", ( ) => {
+		it( "should be equal to 'NaN'", ( ) => {
 
 			assert.equal( stringe( NaN ), "NaN" );
 
@@ -273,7 +271,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( Infinity )`", ( ) => {
 
-		it( "should return 'Infinity'", ( ) => {
+		it( "should be equal to 'Infinity'", ( ) => {
 
 			assert.equal( stringe( Infinity ), "Infinity" );
 
@@ -284,7 +282,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( Array )`", ( ) => {
 
-		it( "should return 'function Array() { [native code] }'", ( ) => {
+		it( "should be equal to 'function Array() { [native code] }'", ( ) => {
 
 			assert.equal( stringe( Array ), "function Array() { [native code] }" );
 
@@ -295,7 +293,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( 123 )`", ( ) => {
 
-		it( "should return '123'", ( ) => {
+		it( "should be equal to '123'", ( ) => {
 
 			assert.equal( stringe( 123 ), "123" );
 
@@ -306,7 +304,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( 'hello world' )`", ( ) => {
 
-		it( "should return 'hello world'", ( ) => {
+		it( "should be equal to 'hello world'", ( ) => {
 
 			assert.equal( stringe( "hello world" ), "hello world" );
 
@@ -314,9 +312,10 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
 	describe( "`stringe( { 'hello': 'world' } )`", ( ) => {
 
-		it( "should return '[object Object]'", ( ) => {
+		it( "should be equal to '[object Object]'", ( ) => {
 
 			assert.equal( stringe( { "hello": "world" } ), "[object Object]" );
 
@@ -324,13 +323,14 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
 	/*;
 		@note:
 			Do not change or delete this, the following are failing test
 
 	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
 
-		it( "should return 'function test( ){ return 'test' }'", ( ) => {
+		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
 
 			assert.equal( stringe( function test( ){ return 'test' } ), "function test( ){ return 'test' }" );
 
@@ -340,7 +340,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( ( ) => { } )`", ( ) => {
 
-		it( "should return '( ) => { }'", ( ) => {
+		it( "should be equal to '( ) => { }'", ( ) => {
 
 			assert.equal( stringe( ( ) => { } ), "( ) => { }" );
 
@@ -360,15 +360,11 @@ describe( "stringe", ( ) => {
 
 describe( "stringe", ( ) => {
 
-
-	let directory = __dirname;
-	let testBridge = path.resolve( directory, "bridge.html" );
-	let bridgeURL = `file://${ testBridge }`;
-
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
 	describe( "`stringe( window )`", ( ) => {
 
-		it( "should return '[object Window]'", ( ) => {
+		it( "should be equal to '[object Window]'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( window ) );
 
@@ -381,7 +377,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( true )`", ( ) => {
 
-		it( "should return 'true'", ( ) => {
+		it( "should be equal to 'true'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( true ) );
 
@@ -391,9 +387,10 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
 	describe( "`stringe( undefined )`", ( ) => {
 
-		it( "should return 'undefined'", ( ) => {
+		it( "should be equal to 'undefined'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( undefined ) );
 
@@ -406,7 +403,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( null )`", ( ) => {
 
-		it( "should return 'null'", ( ) => {
+		it( "should be equal to 'null'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( null ) );
 
@@ -416,9 +413,10 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
 	describe( "`stringe( NaN )`", ( ) => {
 
-		it( "should return 'NaN'", ( ) => {
+		it( "should be equal to 'NaN'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( NaN ) );
 
@@ -431,7 +429,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( Infinity )`", ( ) => {
 
-		it( "should return 'Infinity'", ( ) => {
+		it( "should be equal to 'Infinity'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( Infinity ) );
 
@@ -444,7 +442,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( Array )`", ( ) => {
 
-		it( "should return 'function Array() { [native code] }'", ( ) => {
+		it( "should be equal to 'function Array() { [native code] }'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( Array ) );
 
@@ -457,7 +455,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( 123 )`", ( ) => {
 
-		it( "should return '123'", ( ) => {
+		it( "should be equal to '123'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( 123 ) );
 
@@ -470,7 +468,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( 'hello world' )`", ( ) => {
 
-		it( "should return 'hello world'", ( ) => {
+		it( "should be equal to 'hello world'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( "hello world" ) );
 
@@ -483,7 +481,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( { 'hello': 'world' } )`", ( ) => {
 
-		it( "should return '[object Object]'", ( ) => {
+		it( "should be equal to '[object Object]'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( { "hello": "world" } ) );
 
@@ -493,37 +491,46 @@ describe( "stringe", ( ) => {
 
 	} );
 
+
+	/* backlog
+
+	describe( "`stringe( ( ) => { } )`", ( ) => {
+
+		it( "should be equal to '( ) => { }'", ( ) => {
+
+			console.log( stringe( ( ) => { } ) );
+			assert.equal( true, true );
+
+		} );
+
+	} );
+
+	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
+
+		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let pattern = /function\s+test\s*\(\s*\)\s*\{\s*return\s+\"test\"\;\s*\}/;
+					let data = stringe( function test( ){ return "test" } );
+					return pattern.test( data );
+					//return test == `function test( ){ return "test" }`;
+				}
+
+			).value;
+
+			//: @end-ignore
+
+			console.log( "JLM logs", result );
+			assert.equal( true, true );
+
+		} );
+
+	} );
+
+	*/
+
 } );
 
 //: @end-bridge
-
-
-/*;
-	@note:
-		Do not change or delete this, the following are failing bridge tests
-
-		describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
-
-			it( "should return 'function test( ){ return 'test' }'", ( ) => {
-
-				let result = browser.url( bridgeURL ).execute( ( ) => stringe( function test( ){ return 'test' } ) );
-
-				assert.equal( result.value, "function test( ){ return 'test' }" );
-
-			} );
-
-		} );
-
-		describe( "`stringe( ( ) => { } )`", ( ) => {
-
-			it( "should return '( ) => { }'", ( ) => {
-
-				console.log( stringe( ( ) => { } ) );
-				assert.equal( true, true );
-
-			} );
-
-		} );
-
-	@end-note
-*/
