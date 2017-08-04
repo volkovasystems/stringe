@@ -492,19 +492,18 @@ describe( "stringe", ( ) => {
 	} );
 
 
-	/* backlog
-
 	describe( "`stringe( ( ) => { } )`", ( ) => {
 
 		it( "should be equal to '( ) => { }'", ( ) => {
 
-			console.log( stringe( ( ) => { } ) );
-			assert.equal( true, true );
+			let result = browser.url( bridgeURL ).execute( ( ) => stringe( ( ) => { } ) );
+			assert.equal( result.value, "( ) => { }" );
 
 		} );
 
 	} );
 
+	/*
 	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
 
 		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
