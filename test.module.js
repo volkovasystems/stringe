@@ -491,42 +491,6 @@ describe( "stringe", ( ) => {
 
 	} );
 
-	//Do not delete this commented test because these is a work in progress
-	// describe( "`stringe( ( ) => { } )`", ( ) => {
-	//
-	// 	it( "should be equal to '( ) => { }'", ( ) => {
-	// 		//: @ignore:
-	// 		let result = browser.url( bridgeURL ).execute( ( ) => stringe( ( ) => { } ) );
-	// 		assert.equal( result.value, "( ) => { }" );
-	// 		//: @end-ignore
-	// 	} );
-	//
-	// } );
-	//
-	//
-	// describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
-	//
-	// 	it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
-	// 		//: @ignore:
-	// 		let result = browser.url( bridgeURL ).execute(
-	//
-	// 			function( ){
-	// 				let pattern = /function\s+test\s*\(\s*\)\s*\{\s*return\s+\"test\"\;\s*\}/;
-	// 				let data = stringe( function test( ){ return "test" } );
-	// 				return pattern.test( data );
-	// 				//return test == `function test( ){ return "test" }`;
-	// 			}
-	//
-	// 		).value;
-	//
-	// 		//: @end-ignore
-	//
-	// 		assert.equal( true, true );
-	//
-	// 	} );
-	//
-	// } );
-
 } );
 
 //: @end-bridge
