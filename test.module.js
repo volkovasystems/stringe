@@ -495,10 +495,10 @@ describe( "stringe", ( ) => {
 	describe( "`stringe( ( ) => { } )`", ( ) => {
 
 		it( "should be equal to '( ) => { }'", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( ( ) => { } ) );
 			assert.equal( result.value, "( ) => { }" );
-
+			//: @end-ignore
 		} );
 
 	} );
