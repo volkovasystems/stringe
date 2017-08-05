@@ -468,7 +468,6 @@ describe( "stringe", ( ) => {
 	describe( "`stringe( ( ) => { } )`", ( ) => {
 		it( "should be equal to '( ) => { }'", ( ) => {
 			//: @ignore:
-
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -488,7 +487,7 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
 		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -499,7 +498,7 @@ describe( "stringe", ( ) => {
 				}
 
 			).value;
-
+			//: @end-ignore
 			assert.equal( result, true );
 
 		} );
