@@ -323,33 +323,6 @@ describe( "stringe", ( ) => {
 
 	} );
 
-
-	/*;
-		@note:
-			Do not change or delete this, the following are failing test
-
-	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
-
-		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
-
-			assert.equal( stringe( function test( ){ return 'test' } ), "function test( ){ return 'test' }" );
-
-		} );
-
-	} );
-
-	describe( "`stringe( ( ) => { } )`", ( ) => {
-
-		it( "should be equal to '( ) => { }'", ( ) => {
-
-			assert.equal( stringe( ( ) => { } ), "( ) => { }" );
-
-		} );
-
-	} );
-	*/
-
-
 } );
 
 //: @end-client
@@ -489,6 +462,47 @@ describe( "stringe", ( ) => {
 
 		} );
 
+	} );
+
+
+	describe( "`stringe( ( ) => { } )`", ( ) => {
+		it( "should be equal to '( ) => { }'", ( ) => {
+			//: @ignore:
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let pattern = /\(\s*\)\s*\=\>\s*\{\s*\}/;
+					let data = stringe( ( ) => { } );
+					let test = pattern.test( data );
+					return test;
+				}
+
+			).value;
+
+			assert.equal( result, true );
+			//: @end-ignore
+		} );
+	} );
+
+
+	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
+		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let pattern = /function\s+test\s*\(\s*\)\s*\{\s*return\s+\'test\'\s*\}/;
+					let data = stringe( function test( ){ return 'test' } );
+					let test = pattern.test( data );
+					return test;
+				}
+
+			).value;
+
+			assert.equal( result, true );
+
+		} );
 	} );
 
 } );
