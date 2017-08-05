@@ -327,9 +327,7 @@ describe( "stringe", ( ) => {
 
 //: @end-client
 
-
 //: @bridge:
-
 
 describe( "stringe", ( ) => {
 
