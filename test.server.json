@@ -5,15 +5,15 @@
     "passes": 12,
     "pending": 0,
     "failures": 0,
-    "start": "2017-08-20T01:31:29.071Z",
-    "end": "2017-08-20T01:31:29.086Z",
-    "duration": 15
+    "start": "2017-08-20T03:40:56.883Z",
+    "end": "2017-08-20T03:40:56.890Z",
+    "duration": 7
   },
   "tests": [
     {
       "title": "should be equal to '[object global]'",
       "fullTitle": "stringe `stringe( global )` should be equal to '[object global]'",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -41,7 +41,7 @@
     {
       "title": "should be equal to 'NaN'",
       "fullTitle": "stringe `stringe( NaN )` should be equal to 'NaN'",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -101,7 +101,7 @@
     {
       "title": "should be equal to '[object global]'",
       "fullTitle": "stringe `stringe( global )` should be equal to '[object global]'",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -129,7 +129,7 @@
     {
       "title": "should be equal to 'NaN'",
       "fullTitle": "stringe `stringe( NaN )` should be equal to 'NaN'",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
