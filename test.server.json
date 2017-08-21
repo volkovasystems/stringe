@@ -5,9 +5,9 @@
 		"passes": 12,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-08-21T11:48:31.920Z",
-		"end": "2017-08-21T11:48:31.927Z",
-		"duration": 7
+		"start": "2017-08-21T12:05:14.139Z",
+		"end": "2017-08-21T12:05:14.144Z",
+		"duration": 5
 	},
 	"tests": [
 		{
@@ -76,7 +76,7 @@
 		{
 			"title": "should be equal to '[object Object]'",
 			"fullTitle": "stringe `stringe( { 'hello': 'world' } )` should be equal to '[object Object]'",
-			"duration": 1,
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
@@ -164,7 +164,7 @@
 		{
 			"title": "should be equal to '[object Object]'",
 			"fullTitle": "stringe `stringe( { 'hello': 'world' } )` should be equal to '[object Object]'",
-			"duration": 1,
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
