@@ -310,11 +310,11 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( ( ) => { } )`", ( ) => {
 		it( "should be equal to '( ) => { }'", ( ) => {
-			//: @ignore:
+
 			let pattern = /\(\s*\)\s*\=\>\s*\{\s*\}/;
 			let data = stringe( ( ) => { } );
 			let test = pattern.test( data );
-			//: @end-ignore
+
 			assert.equal( test, true );
 
 		} );
@@ -323,11 +323,11 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
 		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
-			//: @ignore:
+
 			let pattern = /function\s+test\s*\(\s*\)\s*\{\s*return\s+\'test\'\s*\}/;
 			let data = stringe( function test( ){ return 'test' } );
 			let test = pattern.test( data );
-			//: @end-ignore
+			
 			assert.equal( test, true );
 
 		} );

@@ -71,122 +71,102 @@ const stringe = require( "./stringe.js" );
 describe( "stringe", ( ) => {
 
 	describe( "`stringe( global )`", ( ) => {
-
 		it( "should be equal to '[object global]'", ( ) => {
 
 			assert.equal( stringe( global ), "[object global]" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( true )`", ( ) => {
-
 		it( "should be equal to 'true'", ( ) => {
 
 			assert.equal( stringe( true ), "true" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( undefined )`", ( ) => {
-
 		it( "should be equal to 'undefined'", ( ) => {
 
 			assert.equal( stringe( undefined ), "undefined" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( null )`", ( ) => {
-
 		it( "should be equal to 'null'", ( ) => {
 
 			assert.equal( stringe( null ), "null" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( NaN )`", ( ) => {
-
 		it( "should be equal to 'NaN'", ( ) => {
 
 			assert.equal( stringe( NaN ), "NaN" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( Infinity )`", ( ) => {
-
 		it( "should be equal to 'Infinity'", ( ) => {
 
 			assert.equal( stringe( Infinity ), "Infinity" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( Array )`", ( ) => {
-
 		it( "should be equal to 'function Array() { [native code] }'", ( ) => {
 
 			assert.equal( stringe( Array ), "function Array() { [native code] }" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( 123 )`", ( ) => {
-
 		it( "should be equal to '123'", ( ) => {
 
 			assert.equal( stringe( 123 ), "123" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( 'hello world' )`", ( ) => {
-
 		it( "should be equal to 'hello world'", ( ) => {
 
 			assert.equal( stringe( "hello world" ), "hello world" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( { 'hello': 'world' } )`", ( ) => {
-
 		it( "should be equal to '[object Object]'", ( ) => {
 
 			assert.equal( stringe( { "hello": "world" } ), "[object Object]" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( ( ) => { } )`", ( ) => {
 		it( "should be equal to '( ) => { }'", ( ) => {
-			//: @ignore:
+
 			let pattern = /\(\s*\)\s*\=\>\s*\{\s*\}/;
 			let data = stringe( ( ) => { } );
 			let test = pattern.test( data );
-			//: @end-ignore
+
 			assert.equal( test, true );
 
 		} );
@@ -195,11 +175,11 @@ describe( "stringe", ( ) => {
 
 	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
 		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
-			//: @ignore:
+
 			let pattern = /function\s+test\s*\(\s*\)\s*\{\s*return\s+\'test\'\s*\}/;
 			let data = stringe( function test( ){ return 'test' } );
 			let test = pattern.test( data );
-			//: @end-ignore
+
 			assert.equal( test, true );
 
 		} );
