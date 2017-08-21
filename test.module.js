@@ -327,7 +327,7 @@ describe( "stringe", ( ) => {
 			let pattern = /function\s+test\s*\(\s*\)\s*\{\s*return\s+\'test\'\s*\}/;
 			let data = stringe( function test( ){ return 'test' } );
 			let test = pattern.test( data );
-			
+
 			assert.equal( test, true );
 
 		} );
