@@ -36,8 +36,7 @@
 			"author": "Richeve S. Bebedor",
 			"eMail": "richeve.bebedor@gmail.com",
 			"contributors": [
-				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-				"Vinse Vinalon <vinsevinalon@gmail.com>"
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
 			],
 			"repository": "https://github.com/volkovasystems/numric.git"
 		}
@@ -69,9 +68,7 @@ const stringe = require( "./stringe.support.js" );
 const path = require( "path" );
 //: @end-bridge
 
-
 //: @server:
-
 describe( "stringe", ( ) => {
 
 	describe( "`stringe( global )`", ( ) => {
@@ -82,7 +79,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( true )`", ( ) => {
 		it( "should be equal to 'true'", ( ) => {
 
@@ -90,7 +86,6 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`stringe( undefined )`", ( ) => {
 		it( "should be equal to 'undefined'", ( ) => {
@@ -100,7 +95,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( null )`", ( ) => {
 		it( "should be equal to 'null'", ( ) => {
 
@@ -108,7 +102,6 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`stringe( NaN )`", ( ) => {
 		it( "should be equal to 'NaN'", ( ) => {
@@ -118,7 +111,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( Infinity )`", ( ) => {
 		it( "should be equal to 'Infinity'", ( ) => {
 
@@ -126,7 +118,6 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`stringe( Array )`", ( ) => {
 		it( "should be equal to 'function Array() { [native code] }'", ( ) => {
@@ -136,7 +127,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( 123 )`", ( ) => {
 		it( "should be equal to '123'", ( ) => {
 
@@ -144,7 +134,6 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`stringe( 'hello world' )`", ( ) => {
 		it( "should be equal to 'hello world'", ( ) => {
@@ -154,7 +143,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( { 'hello': 'world' } )`", ( ) => {
 		it( "should be equal to '[object Object]'", ( ) => {
 
@@ -162,7 +150,6 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`stringe( ( ) => { } )`", ( ) => {
 		it( "should be equal to '( ) => { }'", ( ) => {
@@ -176,7 +163,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
 		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
 
@@ -188,163 +174,104 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 } );
-
 //: @end-server
 
-
 //: @client:
-
 describe( "stringe", ( ) => {
 
 	describe( "`stringe( window )`", ( ) => {
-
 		it( "should be equal to '[object Window]'", ( ) => {
 
 			assert.equal( stringe( window ), "[object Window]" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( true )`", ( ) => {
-
 		it( "should be equal to 'true'", ( ) => {
 
 			assert.equal( stringe( true ), "true" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( undefined )`", ( ) => {
-
 		it( "should be equal to 'undefined'", ( ) => {
 
 			assert.equal( stringe( undefined ), "undefined" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( null )`", ( ) => {
-
 		it( "should be equal to 'null'", ( ) => {
 
 			assert.equal( stringe( null ), "null" );
 
 		} );
-
 	} );
 
 
 	describe( "`stringe( NaN )`", ( ) => {
-
 		it( "should be equal to 'NaN'", ( ) => {
 
 			assert.equal( stringe( NaN ), "NaN" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( Infinity )`", ( ) => {
-
 		it( "should be equal to 'Infinity'", ( ) => {
 
 			assert.equal( stringe( Infinity ), "Infinity" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( Array )`", ( ) => {
-
 		it( "should be equal to 'function Array() { [native code] }'", ( ) => {
 
 			assert.equal( stringe( Array ), "function Array() { [native code] }" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( 123 )`", ( ) => {
-
 		it( "should be equal to '123'", ( ) => {
 
 			assert.equal( stringe( 123 ), "123" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( 'hello world' )`", ( ) => {
-
 		it( "should be equal to 'hello world'", ( ) => {
 
 			assert.equal( stringe( "hello world" ), "hello world" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( { 'hello': 'world' } )`", ( ) => {
-
 		it( "should be equal to '[object Object]'", ( ) => {
 
 			assert.equal( stringe( { "hello": "world" } ), "[object Object]" );
 
 		} );
-
-	} );
-
-
-	describe( "`stringe( ( ) => { } )`", ( ) => {
-		it( "should be equal to '( ) => { }'", ( ) => {
-
-			let pattern = /\(\s*\)\s*\=\>\s*\{\s*\}/;
-			let data = stringe( ( ) => { } );
-			let test = pattern.test( data );
-
-			assert.equal( test, true );
-
-		} );
-	} );
-
-
-	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
-		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
-
-			let pattern = /function\s+test\s*\(\s*\)\s*\{\s*return\s+\'test\'\s*\}/;
-			let data = stringe( function test( ){ return 'test' } );
-			let test = pattern.test( data );
-
-			assert.equal( test, true );
-
-		} );
 	} );
 
 } );
-
 //: @end-client
 
-//: @bridge:
 
+//: @bridge:
 describe( "stringe", ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
 	describe( "`stringe( window )`", ( ) => {
-
 		it( "should be equal to '[object Window]'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( window ) );
@@ -352,12 +279,9 @@ describe( "stringe", ( ) => {
 			assert.equal( result.value, "[object Window]" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( true )`", ( ) => {
-
 		it( "should be equal to 'true'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( true ) );
@@ -365,12 +289,9 @@ describe( "stringe", ( ) => {
 			assert.equal( result.value, "true" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( undefined )`", ( ) => {
-
 		it( "should be equal to 'undefined'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( undefined ) );
@@ -378,12 +299,9 @@ describe( "stringe", ( ) => {
 			assert.equal( result.value, "undefined" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( null )`", ( ) => {
-
 		it( "should be equal to 'null'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( null ) );
@@ -391,12 +309,9 @@ describe( "stringe", ( ) => {
 			assert.equal( result.value, "null" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( NaN )`", ( ) => {
-
 		it( "should be equal to 'NaN'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( NaN ) );
@@ -404,12 +319,9 @@ describe( "stringe", ( ) => {
 			assert.equal( result.value, "NaN" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( Infinity )`", ( ) => {
-
 		it( "should be equal to 'Infinity'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( Infinity ) );
@@ -417,12 +329,9 @@ describe( "stringe", ( ) => {
 			assert.equal( result.value, "Infinity" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( Array )`", ( ) => {
-
 		it( "should be equal to 'function Array() { [native code] }'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( Array ) );
@@ -430,12 +339,9 @@ describe( "stringe", ( ) => {
 			assert.equal( result.value, "function Array() { [native code] }" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( 123 )`", ( ) => {
-
 		it( "should be equal to '123'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( 123 ) );
@@ -443,12 +349,9 @@ describe( "stringe", ( ) => {
 			assert.equal( result.value, "123" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( 'hello world' )`", ( ) => {
-
 		it( "should be equal to 'hello world'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( "hello world" ) );
@@ -456,12 +359,9 @@ describe( "stringe", ( ) => {
 			assert.equal( result.value, "hello world" );
 
 		} );
-
 	} );
 
-
 	describe( "`stringe( { 'hello': 'world' } )`", ( ) => {
-
 		it( "should be equal to '[object Object]'", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute( ( ) => stringe( { "hello": "world" } ) );
@@ -469,9 +369,7 @@ describe( "stringe", ( ) => {
 			assert.equal( result.value, "[object Object]" );
 
 		} );
-
 	} );
-
 
 	describe( "`stringe( ( ) => { } )`", ( ) => {
 		it( "should be equal to '( ) => { }'", ( ) => {
@@ -486,12 +384,11 @@ describe( "stringe", ( ) => {
 				}
 
 			).value;
+			//: @end-ignore
 
 			assert.equal( result, true );
-			//: @end-ignore
 		} );
 	} );
-
 
 	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
 		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
@@ -507,11 +404,11 @@ describe( "stringe", ( ) => {
 
 			).value;
 			//: @end-ignore
+
 			assert.equal( result, true );
 
 		} );
 	} );
 
 } );
-
 //: @end-bridge

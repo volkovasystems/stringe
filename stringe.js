@@ -30,14 +30,13 @@
 	@module-configuration:
 		{
 			"package": "stringe",
-			"path": "stringe/stringe.js",
+			"path": "stringe/stringe.module.js",
 			"file": "stringe.js",
 			"module": "stringe",
 			"author": "Richeve S. Bebedor",
 			"eMail": "richeve.bebedor@gmail.com",
 			"contributors": [
-				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-				"Vinse Vinalon <vinsevinalon@gmail.com>"
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
 			],
 			"repository": "https://github.com/volkovasystems/stringe.git",
 			"test": "stringe-test.js",
@@ -67,16 +66,21 @@ const stringe = function stringe( entity ){
 
 	let issue = [ ];
 	try{
-		if( typeof entity == "undefined" || entity === null ||
-			typeof entity[ TO_STRING ] != "function" )
-		{
+		if(
+			typeof entity == "undefined"
+			|| entity === null
+			|| typeof entity[ TO_STRING ] != "function"
+		){
 			return `${ entity }`;
 		}
 
 	}catch( error ){ issue.push( error.stack ); }
 
 	try{
-		if( entity[ TO_STRING ] && ( typeof entity[ TO_STRING ] == "function" ) ){
+		if(
+			entity[ TO_STRING ]
+			&& typeof entity[ TO_STRING ] == "function"
+		){
 			return entity.toString( );
 		}
 
@@ -98,7 +102,7 @@ const stringe = function stringe( entity ){
 	}catch( error ){
 		issue.push( error.stack );
 
-		throw new Error( `fatal, cannot transform to string, ${ issue.join( "," ) }` )
+		throw new Error( `cannot transform to string, ${ issue.join( "," ) }` );
 	}
 };
 

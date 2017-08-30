@@ -4,8 +4,8 @@
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-08-21T12:05:17.445Z",
-	"end": "2017-08-21T12:05:54.659Z",
+	"start": "2017-08-30T08:05:53.497Z",
+	"end": "2017-08-30T08:06:34.781Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -14,7 +14,9 @@
 				"headless"
 			]
 		},
-		"proxy": null
+		"proxy": {
+			"proxyType": "direct"
+		}
 	},
 	"host": "127.0.0.1",
 	"port": 4444,
@@ -22,218 +24,219 @@
 	"framework": "mocha",
 	"mochaOpts": {
 		"timeout": 10000,
-		"ui": "bdd"
+		"ui": "bdd",
+		"slow": 0
 	},
 	"suites": [
 		{
 			"name": "stringe",
 			"duration": 0,
-			"start": "2017-08-21T12:05:53.925Z",
+			"start": "2017-08-30T08:06:34.080Z",
 			"tests": [],
 			"hooks": []
 		},
 		{
 			"name": "stringe",
-			"duration": 549,
-			"start": "2017-08-21T12:05:53.926Z",
-			"end": "2017-08-21T12:05:54.475Z",
+			"duration": 533,
+			"start": "2017-08-30T08:06:34.081Z",
+			"end": "2017-08-30T08:06:34.614Z",
 			"tests": [],
 			"hooks": [
 				{
-					"start": "2017-08-21T12:05:53.928Z",
-					"end": "2017-08-21T12:05:53.928Z",
+					"start": "2017-08-30T08:06:34.082Z",
+					"end": "2017-08-30T08:06:34.082Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to '[object Window]'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.015Z",
-					"end": "2017-08-21T12:05:54.015Z",
+					"start": "2017-08-30T08:06:34.166Z",
+					"end": "2017-08-30T08:06:34.166Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to '[object Window]'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.017Z",
-					"end": "2017-08-21T12:05:54.018Z",
+					"start": "2017-08-30T08:06:34.167Z",
+					"end": "2017-08-30T08:06:34.168Z",
 					"duration": 1,
 					"title": "\"before each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'true'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.058Z",
-					"end": "2017-08-21T12:05:54.058Z",
+					"start": "2017-08-30T08:06:34.209Z",
+					"end": "2017-08-30T08:06:34.209Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'true'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.058Z",
-					"end": "2017-08-21T12:05:54.058Z",
+					"start": "2017-08-30T08:06:34.210Z",
+					"end": "2017-08-30T08:06:34.210Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'undefined'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.094Z",
-					"end": "2017-08-21T12:05:54.094Z",
+					"start": "2017-08-30T08:06:34.250Z",
+					"end": "2017-08-30T08:06:34.250Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'undefined'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.095Z",
-					"end": "2017-08-21T12:05:54.096Z",
-					"duration": 1,
+					"start": "2017-08-30T08:06:34.250Z",
+					"end": "2017-08-30T08:06:34.250Z",
+					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'null'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.132Z",
-					"end": "2017-08-21T12:05:54.133Z",
+					"start": "2017-08-30T08:06:34.293Z",
+					"end": "2017-08-30T08:06:34.294Z",
 					"duration": 1,
 					"title": "\"after each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'null'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.133Z",
-					"end": "2017-08-21T12:05:54.133Z",
+					"start": "2017-08-30T08:06:34.294Z",
+					"end": "2017-08-30T08:06:34.294Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'NaN'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.163Z",
-					"end": "2017-08-21T12:05:54.164Z",
-					"duration": 1,
+					"start": "2017-08-30T08:06:34.332Z",
+					"end": "2017-08-30T08:06:34.332Z",
+					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'NaN'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.164Z",
-					"end": "2017-08-21T12:05:54.164Z",
+					"start": "2017-08-30T08:06:34.332Z",
+					"end": "2017-08-30T08:06:34.332Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'Infinity'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.209Z",
-					"end": "2017-08-21T12:05:54.209Z",
+					"start": "2017-08-30T08:06:34.374Z",
+					"end": "2017-08-30T08:06:34.374Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'Infinity'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.211Z",
-					"end": "2017-08-21T12:05:54.211Z",
+					"start": "2017-08-30T08:06:34.374Z",
+					"end": "2017-08-30T08:06:34.374Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'function Array() { [native code] }'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.252Z",
-					"end": "2017-08-21T12:05:54.252Z",
-					"duration": 0,
+					"start": "2017-08-30T08:06:34.417Z",
+					"end": "2017-08-30T08:06:34.418Z",
+					"duration": 1,
 					"title": "\"after each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'function Array() { [native code] }'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.253Z",
-					"end": "2017-08-21T12:05:54.255Z",
-					"duration": 2,
+					"start": "2017-08-30T08:06:34.419Z",
+					"end": "2017-08-30T08:06:34.420Z",
+					"duration": 1,
 					"title": "\"before each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to '123'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.289Z",
-					"end": "2017-08-21T12:05:54.289Z",
+					"start": "2017-08-30T08:06:34.454Z",
+					"end": "2017-08-30T08:06:34.454Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to '123'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.291Z",
-					"end": "2017-08-21T12:05:54.291Z",
+					"start": "2017-08-30T08:06:34.456Z",
+					"end": "2017-08-30T08:06:34.456Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'hello world'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.331Z",
-					"end": "2017-08-21T12:05:54.332Z",
-					"duration": 1,
+					"start": "2017-08-30T08:06:34.496Z",
+					"end": "2017-08-30T08:06:34.496Z",
+					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'hello world'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.332Z",
-					"end": "2017-08-21T12:05:54.332Z",
+					"start": "2017-08-30T08:06:34.497Z",
+					"end": "2017-08-30T08:06:34.497Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to '[object Object]'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.377Z",
-					"end": "2017-08-21T12:05:54.377Z",
+					"start": "2017-08-30T08:06:34.533Z",
+					"end": "2017-08-30T08:06:34.533Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to '[object Object]'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.378Z",
-					"end": "2017-08-21T12:05:54.378Z",
+					"start": "2017-08-30T08:06:34.534Z",
+					"end": "2017-08-30T08:06:34.534Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to '( ) => { }'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.419Z",
-					"end": "2017-08-21T12:05:54.420Z",
+					"start": "2017-08-30T08:06:34.570Z",
+					"end": "2017-08-30T08:06:34.570Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "stringe",
+					"associatedTest": "should be equal to '( ) => { }'"
+				},
+				{
+					"start": "2017-08-30T08:06:34.570Z",
+					"end": "2017-08-30T08:06:34.570Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "stringe",
+					"associatedTest": "should be equal to 'function test( ){ return 'test' }'"
+				},
+				{
+					"start": "2017-08-30T08:06:34.613Z",
+					"end": "2017-08-30T08:06:34.614Z",
 					"duration": 1,
 					"title": "\"after each\" hook",
 					"associatedSuite": "stringe",
-					"associatedTest": "should be equal to '( ) => { }'"
-				},
-				{
-					"start": "2017-08-21T12:05:54.420Z",
-					"end": "2017-08-21T12:05:54.420Z",
-					"duration": 0,
-					"title": "\"before each\" hook",
-					"associatedSuite": "stringe",
 					"associatedTest": "should be equal to 'function test( ){ return 'test' }'"
 				},
 				{
-					"start": "2017-08-21T12:05:54.475Z",
-					"end": "2017-08-21T12:05:54.475Z",
-					"duration": 0,
-					"title": "\"after each\" hook",
-					"associatedSuite": "stringe",
-					"associatedTest": "should be equal to 'function test( ){ return 'test' }'"
-				},
-				{
-					"start": "2017-08-21T12:05:54.475Z",
-					"end": "2017-08-21T12:05:54.475Z",
+					"start": "2017-08-30T08:06:34.614Z",
+					"end": "2017-08-30T08:06:34.614Z",
 					"duration": 0,
 					"title": "\"after all\" hook",
 					"associatedSuite": "stringe"
@@ -242,15 +245,15 @@
 		},
 		{
 			"name": "`stringe( window )`",
-			"duration": 90,
-			"start": "2017-08-21T12:05:53.927Z",
-			"end": "2017-08-21T12:05:54.017Z",
+			"duration": 86,
+			"start": "2017-08-30T08:06:34.081Z",
+			"end": "2017-08-30T08:06:34.167Z",
 			"tests": [
 				{
 					"name": "should be equal to '[object Window]'",
-					"start": "2017-08-21T12:05:53.928Z",
-					"end": "2017-08-21T12:05:54.015Z",
-					"duration": 87,
+					"start": "2017-08-30T08:06:34.082Z",
+					"end": "2017-08-30T08:06:34.166Z",
+					"duration": 84,
 					"state": "pass"
 				}
 			],
@@ -258,94 +261,14 @@
 		},
 		{
 			"name": "`stringe( true )`",
-			"duration": 41,
-			"start": "2017-08-21T12:05:54.017Z",
-			"end": "2017-08-21T12:05:54.058Z",
+			"duration": 42,
+			"start": "2017-08-30T08:06:34.167Z",
+			"end": "2017-08-30T08:06:34.209Z",
 			"tests": [
 				{
 					"name": "should be equal to 'true'",
-					"start": "2017-08-21T12:05:54.017Z",
-					"end": "2017-08-21T12:05:54.058Z",
-					"duration": 41,
-					"state": "pass"
-				}
-			],
-			"hooks": []
-		},
-		{
-			"name": "`stringe( undefined )`",
-			"duration": 36,
-			"start": "2017-08-21T12:05:54.058Z",
-			"end": "2017-08-21T12:05:54.094Z",
-			"tests": [
-				{
-					"name": "should be equal to 'undefined'",
-					"start": "2017-08-21T12:05:54.058Z",
-					"end": "2017-08-21T12:05:54.094Z",
-					"duration": 36,
-					"state": "pass"
-				}
-			],
-			"hooks": []
-		},
-		{
-			"name": "`stringe( null )`",
-			"duration": 39,
-			"start": "2017-08-21T12:05:54.094Z",
-			"end": "2017-08-21T12:05:54.133Z",
-			"tests": [
-				{
-					"name": "should be equal to 'null'",
-					"start": "2017-08-21T12:05:54.095Z",
-					"end": "2017-08-21T12:05:54.132Z",
-					"duration": 37,
-					"state": "pass"
-				}
-			],
-			"hooks": []
-		},
-		{
-			"name": "`stringe( NaN )`",
-			"duration": 31,
-			"start": "2017-08-21T12:05:54.133Z",
-			"end": "2017-08-21T12:05:54.164Z",
-			"tests": [
-				{
-					"name": "should be equal to 'NaN'",
-					"start": "2017-08-21T12:05:54.133Z",
-					"end": "2017-08-21T12:05:54.163Z",
-					"duration": 30,
-					"state": "pass"
-				}
-			],
-			"hooks": []
-		},
-		{
-			"name": "`stringe( Infinity )`",
-			"duration": 45,
-			"start": "2017-08-21T12:05:54.164Z",
-			"end": "2017-08-21T12:05:54.209Z",
-			"tests": [
-				{
-					"name": "should be equal to 'Infinity'",
-					"start": "2017-08-21T12:05:54.164Z",
-					"end": "2017-08-21T12:05:54.209Z",
-					"duration": 45,
-					"state": "pass"
-				}
-			],
-			"hooks": []
-		},
-		{
-			"name": "`stringe( Array )`",
-			"duration": 42,
-			"start": "2017-08-21T12:05:54.210Z",
-			"end": "2017-08-21T12:05:54.252Z",
-			"tests": [
-				{
-					"name": "should be equal to 'function Array() { [native code] }'",
-					"start": "2017-08-21T12:05:54.210Z",
-					"end": "2017-08-21T12:05:54.252Z",
+					"start": "2017-08-30T08:06:34.167Z",
+					"end": "2017-08-30T08:06:34.209Z",
 					"duration": 42,
 					"state": "pass"
 				}
@@ -353,15 +276,95 @@
 			"hooks": []
 		},
 		{
+			"name": "`stringe( undefined )`",
+			"duration": 40,
+			"start": "2017-08-30T08:06:34.210Z",
+			"end": "2017-08-30T08:06:34.250Z",
+			"tests": [
+				{
+					"name": "should be equal to 'undefined'",
+					"start": "2017-08-30T08:06:34.210Z",
+					"end": "2017-08-30T08:06:34.250Z",
+					"duration": 40,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`stringe( null )`",
+			"duration": 44,
+			"start": "2017-08-30T08:06:34.250Z",
+			"end": "2017-08-30T08:06:34.294Z",
+			"tests": [
+				{
+					"name": "should be equal to 'null'",
+					"start": "2017-08-30T08:06:34.250Z",
+					"end": "2017-08-30T08:06:34.293Z",
+					"duration": 43,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`stringe( NaN )`",
+			"duration": 38,
+			"start": "2017-08-30T08:06:34.294Z",
+			"end": "2017-08-30T08:06:34.332Z",
+			"tests": [
+				{
+					"name": "should be equal to 'NaN'",
+					"start": "2017-08-30T08:06:34.294Z",
+					"end": "2017-08-30T08:06:34.332Z",
+					"duration": 38,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`stringe( Infinity )`",
+			"duration": 42,
+			"start": "2017-08-30T08:06:34.332Z",
+			"end": "2017-08-30T08:06:34.374Z",
+			"tests": [
+				{
+					"name": "should be equal to 'Infinity'",
+					"start": "2017-08-30T08:06:34.332Z",
+					"end": "2017-08-30T08:06:34.374Z",
+					"duration": 42,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`stringe( Array )`",
+			"duration": 44,
+			"start": "2017-08-30T08:06:34.374Z",
+			"end": "2017-08-30T08:06:34.418Z",
+			"tests": [
+				{
+					"name": "should be equal to 'function Array() { [native code] }'",
+					"start": "2017-08-30T08:06:34.374Z",
+					"end": "2017-08-30T08:06:34.417Z",
+					"duration": 43,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
 			"name": "`stringe( 123 )`",
-			"duration": 37,
-			"start": "2017-08-21T12:05:54.252Z",
-			"end": "2017-08-21T12:05:54.289Z",
+			"duration": 36,
+			"start": "2017-08-30T08:06:34.418Z",
+			"end": "2017-08-30T08:06:34.454Z",
 			"tests": [
 				{
 					"name": "should be equal to '123'",
-					"start": "2017-08-21T12:05:54.252Z",
-					"end": "2017-08-21T12:05:54.288Z",
+					"start": "2017-08-30T08:06:34.418Z",
+					"end": "2017-08-30T08:06:34.454Z",
 					"duration": 36,
 					"state": "pass"
 				}
@@ -370,46 +373,14 @@
 		},
 		{
 			"name": "`stringe( 'hello world' )`",
-			"duration": 43,
-			"start": "2017-08-21T12:05:54.289Z",
-			"end": "2017-08-21T12:05:54.332Z",
+			"duration": 42,
+			"start": "2017-08-30T08:06:34.455Z",
+			"end": "2017-08-30T08:06:34.497Z",
 			"tests": [
 				{
 					"name": "should be equal to 'hello world'",
-					"start": "2017-08-21T12:05:54.289Z",
-					"end": "2017-08-21T12:05:54.331Z",
-					"duration": 42,
-					"state": "pass"
-				}
-			],
-			"hooks": []
-		},
-		{
-			"name": "`stringe( { 'hello': 'world' } )`",
-			"duration": 45,
-			"start": "2017-08-21T12:05:54.332Z",
-			"end": "2017-08-21T12:05:54.377Z",
-			"tests": [
-				{
-					"name": "should be equal to '[object Object]'",
-					"start": "2017-08-21T12:05:54.332Z",
-					"end": "2017-08-21T12:05:54.377Z",
-					"duration": 45,
-					"state": "pass"
-				}
-			],
-			"hooks": []
-		},
-		{
-			"name": "`stringe( ( ) => { } )`",
-			"duration": 43,
-			"start": "2017-08-21T12:05:54.377Z",
-			"end": "2017-08-21T12:05:54.420Z",
-			"tests": [
-				{
-					"name": "should be equal to '( ) => { }'",
-					"start": "2017-08-21T12:05:54.378Z",
-					"end": "2017-08-21T12:05:54.419Z",
+					"start": "2017-08-30T08:06:34.455Z",
+					"end": "2017-08-30T08:06:34.496Z",
 					"duration": 41,
 					"state": "pass"
 				}
@@ -417,16 +388,48 @@
 			"hooks": []
 		},
 		{
+			"name": "`stringe( { 'hello': 'world' } )`",
+			"duration": 37,
+			"start": "2017-08-30T08:06:34.497Z",
+			"end": "2017-08-30T08:06:34.534Z",
+			"tests": [
+				{
+					"name": "should be equal to '[object Object]'",
+					"start": "2017-08-30T08:06:34.497Z",
+					"end": "2017-08-30T08:06:34.533Z",
+					"duration": 36,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`stringe( ( ) => { } )`",
+			"duration": 36,
+			"start": "2017-08-30T08:06:34.534Z",
+			"end": "2017-08-30T08:06:34.570Z",
+			"tests": [
+				{
+					"name": "should be equal to '( ) => { }'",
+					"start": "2017-08-30T08:06:34.534Z",
+					"end": "2017-08-30T08:06:34.570Z",
+					"duration": 36,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
 			"name": "`stringe( function test( ){ return 'test' } )`",
-			"duration": 55,
-			"start": "2017-08-21T12:05:54.420Z",
-			"end": "2017-08-21T12:05:54.475Z",
+			"duration": 44,
+			"start": "2017-08-30T08:06:34.570Z",
+			"end": "2017-08-30T08:06:34.614Z",
 			"tests": [
 				{
 					"name": "should be equal to 'function test( ){ return 'test' }'",
-					"start": "2017-08-21T12:05:54.420Z",
-					"end": "2017-08-21T12:05:54.475Z",
-					"duration": 55,
+					"start": "2017-08-30T08:06:34.570Z",
+					"end": "2017-08-30T08:06:34.613Z",
+					"duration": 43,
 					"state": "pass"
 				}
 			],

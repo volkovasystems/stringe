@@ -1,6 +1,7 @@
 # stringe
 Safe toString alternative.
 
+
 ### Note
 >The following global dependencies should be installed to speed up development procedures.
 1. `npm install flxc@latest --global`

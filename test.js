@@ -36,8 +36,7 @@
 			"author": "Richeve S. Bebedor",
 			"eMail": "richeve.bebedor@gmail.com",
 			"contributors": [
-				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-				"Vinse Vinalon <vinsevinalon@gmail.com>"
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
 			],
 			"repository": "https://github.com/volkovasystems/numric.git"
 		}
@@ -65,9 +64,7 @@ const stringe = require( "./stringe.js" );
 
 
 
-
 //: @server:
-
 describe( "stringe", ( ) => {
 
 	describe( "`stringe( global )`", ( ) => {
@@ -78,7 +75,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( true )`", ( ) => {
 		it( "should be equal to 'true'", ( ) => {
 
@@ -86,7 +82,6 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`stringe( undefined )`", ( ) => {
 		it( "should be equal to 'undefined'", ( ) => {
@@ -96,7 +91,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( null )`", ( ) => {
 		it( "should be equal to 'null'", ( ) => {
 
@@ -104,7 +98,6 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`stringe( NaN )`", ( ) => {
 		it( "should be equal to 'NaN'", ( ) => {
@@ -114,7 +107,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( Infinity )`", ( ) => {
 		it( "should be equal to 'Infinity'", ( ) => {
 
@@ -122,7 +114,6 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`stringe( Array )`", ( ) => {
 		it( "should be equal to 'function Array() { [native code] }'", ( ) => {
@@ -132,7 +123,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( 123 )`", ( ) => {
 		it( "should be equal to '123'", ( ) => {
 
@@ -140,7 +130,6 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`stringe( 'hello world' )`", ( ) => {
 		it( "should be equal to 'hello world'", ( ) => {
@@ -150,7 +139,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( { 'hello': 'world' } )`", ( ) => {
 		it( "should be equal to '[object Object]'", ( ) => {
 
@@ -158,7 +146,6 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 
 	describe( "`stringe( ( ) => { } )`", ( ) => {
 		it( "should be equal to '( ) => { }'", ( ) => {
@@ -172,7 +159,6 @@ describe( "stringe", ( ) => {
 		} );
 	} );
 
-
 	describe( "`stringe( function test( ){ return 'test' } )`", ( ) => {
 		it( "should be equal to 'function test( ){ return 'test' }'", ( ) => {
 
@@ -184,12 +170,5 @@ describe( "stringe", ( ) => {
 
 		} );
 	} );
-
 } );
-
 //: @end-server
-
-
-
-
-

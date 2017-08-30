@@ -10,7 +10,9 @@ exports.config = {
 					"headless"
 				]
 			},
-			"proxy": null
+			"proxy": {
+				"proxyType": "direct"
+			}
 		}
 	],
 	"sync": true,
@@ -31,6 +33,7 @@ exports.config = {
 		"combined": true
 	},
 	"mochaOpts": {
-		"ui": "bdd"
+		"ui": "bdd",
+		"slow": 0
 	}
 };
