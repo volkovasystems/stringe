@@ -1,0 +1,186 @@
+{
+	"stats": {
+		"suites": 13,
+		"tests": 12,
+		"passes": 12,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-30T08:05:52.329Z",
+		"end": "2017-08-30T08:05:52.335Z",
+		"duration": 6
+	},
+	"tests": [
+		{
+			"title": "should be equal to '[object global]'",
+			"fullTitle": "stringe `stringe( global )` should be equal to '[object global]'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'true'",
+			"fullTitle": "stringe `stringe( true )` should be equal to 'true'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'undefined'",
+			"fullTitle": "stringe `stringe( undefined )` should be equal to 'undefined'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'null'",
+			"fullTitle": "stringe `stringe( null )` should be equal to 'null'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'NaN'",
+			"fullTitle": "stringe `stringe( NaN )` should be equal to 'NaN'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Infinity'",
+			"fullTitle": "stringe `stringe( Infinity )` should be equal to 'Infinity'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'function Array() { [native code] }'",
+			"fullTitle": "stringe `stringe( Array )` should be equal to 'function Array() { [native code] }'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to '123'",
+			"fullTitle": "stringe `stringe( 123 )` should be equal to '123'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'hello world'",
+			"fullTitle": "stringe `stringe( 'hello world' )` should be equal to 'hello world'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to '[object Object]'",
+			"fullTitle": "stringe `stringe( { 'hello': 'world' } )` should be equal to '[object Object]'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to '( ) => { }'",
+			"fullTitle": "stringe `stringe( ( ) => { } )` should be equal to '( ) => { }'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'function test( ){ return 'test' }'",
+			"fullTitle": "stringe `stringe( function test( ){ return 'test' } )` should be equal to 'function test( ){ return 'test' }'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to '[object global]'",
+			"fullTitle": "stringe `stringe( global )` should be equal to '[object global]'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'true'",
+			"fullTitle": "stringe `stringe( true )` should be equal to 'true'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'undefined'",
+			"fullTitle": "stringe `stringe( undefined )` should be equal to 'undefined'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'null'",
+			"fullTitle": "stringe `stringe( null )` should be equal to 'null'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'NaN'",
+			"fullTitle": "stringe `stringe( NaN )` should be equal to 'NaN'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Infinity'",
+			"fullTitle": "stringe `stringe( Infinity )` should be equal to 'Infinity'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'function Array() { [native code] }'",
+			"fullTitle": "stringe `stringe( Array )` should be equal to 'function Array() { [native code] }'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to '123'",
+			"fullTitle": "stringe `stringe( 123 )` should be equal to '123'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'hello world'",
+			"fullTitle": "stringe `stringe( 'hello world' )` should be equal to 'hello world'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to '[object Object]'",
+			"fullTitle": "stringe `stringe( { 'hello': 'world' } )` should be equal to '[object Object]'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to '( ) => { }'",
+			"fullTitle": "stringe `stringe( ( ) => { } )` should be equal to '( ) => { }'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'function test( ){ return 'test' }'",
+			"fullTitle": "stringe `stringe( function test( ){ return 'test' } )` should be equal to 'function test( ){ return 'test' }'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
+}

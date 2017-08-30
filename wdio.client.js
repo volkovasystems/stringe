@@ -9,18 +9,21 @@ exports.config = {
 					"disable-gpu",
 					"headless"
 				]
+			},
+			"proxy": {
+				"proxyType": "direct"
 			}
 		}
 	],
 	"sync": true,
-	"logLevel": "silent",
+	"logLevel": "verbose",
 	"coloredLogs": true,
 	"bail": 0,
-	"screenshotPath": "./waste",
+	"screenshotPath": require( "os" ).tmpdir( ),
 	"baseUrl": "http://localhost",
-	"waitforTimeout": 10000,
-	"connectionRetryTimeout": 90000,
-	"connectionRetryCount": 3,
+	"waitforTimeout": 1000,
+	"connectionRetryTimeout": 1000,
+	"connectionRetryCount": 10,
 	"services": [ "selenium-standalone" ],
 	"framework": "mocha",
 	"reporters": [ "json" ],
@@ -29,5 +32,8 @@ exports.config = {
 		"filename": "test.client",
 		"combined": true
 	},
-	"mochaOpts": { "ui": "bdd" }
+	"mochaOpts": {
+		"ui": "bdd",
+		"slow": 0
+	}
 };
