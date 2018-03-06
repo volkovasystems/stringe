@@ -1,13 +1,13 @@
 "use strict";
 
+const path = require( "path" );
 const webpack = require( "webpack" );
 
-const DefinePlugin = webpack.DefinePlugin;
-const ModuleConcatenationPlugin = webpack.optimize.ModuleConcatenationPlugin;
-const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+const UglifyJSPlugin = require( "uglifyjs-webpack-plugin" );
 
 module.exports = {
 	"entry": "./test.support.js",
+	"mode": "production",
 	"resolve": {
 		"descriptionFiles": [
 			"bower.json",
@@ -34,31 +34,33 @@ module.exports = {
 		]
 	},
 	"output": {
+		"path": path.resolve( "./" ),
 		"library": "test",
 		"libraryTarget": "umd",
 		"filename": "test.deploy.js"
 	},
+	"optimization": {
+		"minimize": false
+	},
 	"plugins": [
-		new DefinePlugin( {
-			"process.env.NODE_ENV": '"production"'
-		} ),
-
-		new ModuleConcatenationPlugin( ),
-
-		new UglifyJsPlugin( {
-			"compress": {
-				"keep_fargs": true,
-				"keep_fnames": true,
-				"keep_infinity": true,
-				"warnings": false,
-				"passes": 3
-			},
-			"mangle": {
+		new UglifyJSPlugin( {
+			"parallel": true,
+			"sourceMap": true,
+			"uglifyOptions": {
+				"ecma": 8,
+				"compress": {
+					"keep_fargs": true,
+					"keep_infinity": true,
+					"passes": 3
+				},
+				"output": {
+					"beautify": false
+				},
+				"mangle": false,
+				"keep_classnames": true,
 				"keep_fnames": true
-			},
-			"comments": false,
-			"sourceMap": true
+			}
 		} )
 	],
-	"devtool": "#source-map"
+	"devtool": "source-map"
 };

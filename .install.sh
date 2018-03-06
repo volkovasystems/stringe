@@ -18,10 +18,12 @@ gulp-sourcemaps \
 mocha \
 should \
 source-map-loader \
+uglifyjs-webpack-plugin \
 wdio-json-reporter \
 wdio-mocha-framework \
 wdio-selenium-standalone-service \
 webdriverio \
 webpack \
+webpack-cli \
 yargs \
 --dev

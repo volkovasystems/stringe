@@ -5,15 +5,15 @@
 		"passes": 12,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-08-30T08:14:26.739Z",
-		"end": "2017-08-30T08:14:26.745Z",
+		"start": "2018-03-05T23:07:31.890Z",
+		"end": "2018-03-05T23:07:31.896Z",
 		"duration": 6
 	},
 	"tests": [
 		{
 			"title": "should be equal to '[object global]'",
 			"fullTitle": "stringe `stringe( global )` should be equal to '[object global]'",
-			"duration": 1,
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
@@ -101,7 +101,7 @@
 		{
 			"title": "should be equal to '[object global]'",
 			"fullTitle": "stringe `stringe( global )` should be equal to '[object global]'",
-			"duration": 1,
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
